@@ -1,0 +1,20 @@
+plugin.tx_googlereviews_pi1 {
+    view {
+        templateRootPaths {
+            10 = EXT:google_reviews/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            10 = EXT:google_reviews/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            10 = EXT:google_reviews/Resources/Private/Layouts/
+        }
+    }
+
+    settings {
+        apiEndpoint = {$plugin.tx_googlereviews_pi1.apiEndpoint}
+        apiKey = {$plugin.tx_googlereviews_pi1.apiKey}
+        authorPhotoWidth = {$plugin.tx_googlereviews_pi1.authorPhotoWidth}
+        inludeDefaultStyles = {$plugin.tx_googlereviews_pi1.inludeDefaultStyles}
+    }
+}

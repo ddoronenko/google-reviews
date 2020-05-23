@@ -1,0 +1,123 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Main</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.placeId>
+                        <TCEforms>
+                            <label>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.placeId</label>
+                            <description>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.placeId.desc</description>
+                            <config>
+                                <type>input</type>
+                                <eval>trim,required</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.placeId>
+                    <settings.minStarts>
+                        <TCEforms>
+                            <label>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.minStars</label>
+                            <description>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.minStars.desc</description>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <default>4</default>
+                                <items>
+                                    <numIndex index="1">
+                                        <numIndex index="0">1</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">2</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">3</numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">4</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">5</numIndex>
+                                        <numIndex index="1">5</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.minStarts>
+                    <settings.sortBy>
+                        <TCEforms>
+                            <label>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.sortBy</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <default>0</default>
+                                <items>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.sortBy.item.default</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.sortBy.item.starRating</numIndex>
+                                        <numIndex index="1">rating</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.sortBy.item.time</numIndex>
+                                        <numIndex index="1">time</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.sortBy>
+                    <settings.maxRows>
+                        <TCEforms>
+                            <label>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.maxRows</label>
+                            <description>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.maxRows.desc</description>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <default>5</default>
+                                <items>
+                                    <numIndex index="1">
+                                        <numIndex index="0">1</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">2</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">3</numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">4</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">5</numIndex>
+                                        <numIndex index="1">5</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.maxRows>
+                    <settings.showAuthorProfilePhoto>
+                        <TCEforms>
+                            <label>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.showAuthorProfilePhoto</label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.showAuthorProfilePhoto>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

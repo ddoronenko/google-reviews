@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file target-language="de"
+          datatype="plaintext"
+          original="messages"
+          date="2020-05-20T17:58:21Z"
+          product-name="google_reviews"
+    >
+        <header/>
+        <body>
+            <trans-unit id="general.no_results">
+                <target>Es wurden keine Bewertungen gefunden!</target>
+            </trans-unit>
+
+            <trans-unit id="general.date_format">
+                <target>d.m.Y</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

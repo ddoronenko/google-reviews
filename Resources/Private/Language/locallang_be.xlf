@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en"
+          datatype="plaintext"
+          original="messages"
+          date="2020-05-20T17:58:21Z"
+          product-name="google_reviews">
+        <header/>
+        <body>
+            <trans-unit id="plugin_pi1.title">
+                <source>Google Reviews</source>
+            </trans-unit>
+
+            <!-- Flexform -->
+            <trans-unit id="google_reviews_pi1.flexform.placeId">
+                <source>Place ID</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.placeId.desc">
+                <source>Put the ID of target place</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.minStars">
+                <source>Minimum stars</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.minStars.desc">
+                <source>Show reviews only if they have min stars count</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.sortBy">
+                <source>Sort By</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.sortBy.desc">
+                <source>Select sorting of reviews</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.sortBy.item.default">
+                <source>Relevance (default)</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.sortBy.item.starRating">
+                <source>Stars rating</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.sortBy.item.time">
+                <source>Review date</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.maxRows">
+                <source>Limit</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.maxRows.desc">
+                <source>Select max reviews to show</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.showAuthorProfilePhoto">
+                <source>Show author profile photo</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

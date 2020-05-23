@@ -1,0 +1,40 @@
+{
+  "name": "ddoronenko/google-reviews",
+  "type": "typo3-cms-extension",
+  "description": "TYPO3 extension for simple Google reviews output according to the selected place.",
+  "license": [
+    "GPL-3.0-or-later"
+  ],
+  "keywords": [
+    "TYPO3 CMS", "Google", "review", "business"
+  ],
+  "autoload": {
+    "psr-4": {
+      "GoogleBusiness\\GoogleReviews\\": "Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "public"
+    }
+  },
+  "config": {
+    "bin-dir": "bin",
+    "vendor-dir": "vendor",
+    "platform": {
+      "php": "7.2"
+    }
+  },
+  "authors": [
+    {
+      "name": "Dmytro Doronenko",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "ext-json": "*",
+    "ext-curl": "*",
+    "typo3/cms-core": "^9.0 || ^10.0"
+  }
+}

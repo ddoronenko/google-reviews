@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <div class="simple-google-reviews row">
+        <f:if condition="{reviews}">
+            <f:then>
+                <f:for each="{reviews}" as="review">
+                    <f:render partial="Review/Item" arguments="{review: review}" />
+                </f:for>
+            </f:then>
+            <f:else>
+                <strong><f:translate id="general.no_results" /></strong>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>
+</html>
