@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Google Review',
-    'description' => 'Simple TYPO3 plugin for Goggle Reviews output.',
+    'description' => 'Simple TYPO3 plugin for Google Reviews output.',
     'category' => 'fe',
     'version' => '1.0.0',
     'module' => '',

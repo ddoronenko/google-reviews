@@ -1,18 +1,27 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<div class="col-sm-12">
-    <f:if condition="{settings.showAuthorProfilePhoto} == 1">
-        <div class="col-sm-4">
-            <img src="{review.profile_photo_url}" width="{settings.authorPhotoWidth}" alt="{review.author_name}" />
+<div class="col-sm-12 mb-3 review">
+    <div class="d-sm-flex text-center text-sm-left">
+        <f:if condition="{settings.showAuthorProfilePhoto} == 1">
+            <div class="pr-4 img-wrapper">
+                <img src="{review.profile_photo_url}" width="{settings.authorPhotoWidth}" alt="{review.author_name}" />
+            </div>
+        </f:if>
+        <div>
+            <strong class="author-name">{review.author_name}</strong>
+            <div class="star-rating">
+                <span class="stars stars-{review.rating}">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <span class="date">
+                <f:format.date format="{f:translate(id: 'general.date_format')}">{review.time}</f:format.date>
+            </span>
+            <p class="text">{review.text}</p>
         </div>
-    </f:if>
-    <div class="col-sm-8">
-        <div class="star-rating">
-            <span class="fa fa-star" aria-hidden="true"></span>
-        </div>
-        <strong>{review.author_name}</strong>
-        <br />
-        <p>{review.text}</p>
-        <f:format.date format="{f:translate(id: 'general.date_format')}">{review.time}</f:format.date>
     </div>
 </div>
 </html>

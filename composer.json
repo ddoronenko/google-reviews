@@ -15,8 +15,7 @@
   },
   "extra": {
     "typo3/cms": {
-      "cms-package-dir": "{$vendor-dir}/typo3/cms",
-      "web-dir": "public"
+      "cms-package-dir": "{$vendor-dir}/typo3/cms"
     }
   },
   "config": {
@@ -35,6 +34,10 @@
   "require": {
     "ext-json": "*",
     "ext-curl": "*",
-    "typo3/cms-core": "^9.0 || ^10.0"
+    "typo3/cms-core": "^9.5 || ^10.4"
+  },
+  "replace": {
+    "ddoronenko/google-reviews": "self.version",
+    "typo3-ter/google-reviews": "self.version"
   }
 }

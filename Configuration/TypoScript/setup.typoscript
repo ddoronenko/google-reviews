@@ -15,6 +15,7 @@ plugin.tx_googlereviews_pi1 {
         apiEndpoint = {$plugin.tx_googlereviews_pi1.apiEndpoint}
         apiKey = {$plugin.tx_googlereviews_pi1.apiKey}
         authorPhotoWidth = {$plugin.tx_googlereviews_pi1.authorPhotoWidth}
-        inludeDefaultStyles = {$plugin.tx_googlereviews_pi1.inludeDefaultStyles}
     }
 }
+
+page.includeCSS.googleReviews = EXT:google_reviews/Resources/Public/Styles/google-reviews.css

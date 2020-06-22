@@ -7,7 +7,4 @@ plugin.tx_googlereviews_pi1 {
 
     # cat=plugin.tx_tx_googlereviews_pi1/front/3; type=int+; label=Width of author's profile photo
     authorPhotoWidth = 50
-
-    # cat=plugin.tx_tx_googlereviews_pi1/front/4; type=boolean; label=Include default styles
-    inludeDefaultStyles = 1
 }
