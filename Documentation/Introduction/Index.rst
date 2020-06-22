@@ -21,35 +21,30 @@ Introduction
 What does it do?
 ================
 
-The aim of this chapter is to provide a general overview of your extension.
+Google Reviews extension to display Google business reviews on your website.
+The simple TYPO3 extension that displays five (most-relevant) Google reviews according to selected Place ID.
 
-* What does it do?
-* What problems does it solve?
-* Who is the target audience?
 
-This chapter should provide information that will help inform 
-potential users and assist them in deciding if they should 
-install and use this extension.
 
-.. important::
+Requirements
+================
 
-   Don't forget to set extension's version number in :file:`Settings.cfg` file,
-   in the :code:`release` property.
-   It will be automatically picked up on the cover page by the :code:`|release|` substitution.
+Google maps API key, with Maps JavaScript API and Places API both enabled via your Google API console.
+
+.. warning::
+    Reminder: To use the Maps JavaScript API, you must include an API key with all API requests and you must enable billing on each of your projects.
+    Please, read the conditions `Maps JavaScript API Usage and Billing <https://developers.google.com/maps/documentation/javascript/usage-and-billing>`__
+
 
 .. _screenshots:
 
 Screenshots
 ===========
 
-This chapter should help people understand how the extension works.
-Remove it if it is not relevant.
-
 .. figure:: ../Images/IntroductionPackage.png
    :class: with-shadow
    :alt: Introduction Package
    :width: 300px
 
-   Introduction Package after installation (caption of the image).
 
-How the Frontend of the Introduction Package looks like after installation (legend of the image).
+How the Frontend of the Google Reviews plugin looks like after installation.

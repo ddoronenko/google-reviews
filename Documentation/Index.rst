@@ -56,4 +56,3 @@ This documentation is for the TYPO3 extension google_reviews.
    Introduction/Index
    Installation/Index
    Configuration/Index
-   KnownProblems/In dex

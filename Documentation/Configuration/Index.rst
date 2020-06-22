@@ -6,45 +6,187 @@
 Configuration
 =============
 
-How is the extension configured?
-Aim to provide simple instructions detailing how the extension is configured.
-Always assume that the user has no prior experience of using the extension.
+Required
+""""""""""""""""
 
-Try and provide a typical use case for your extension
-and detail each of the steps required to get the extension running.
+1. On your root page, in the site template, add "Google reviews" in the "Include static (from extensions)" field.
 
-Typical Example
-===============
+2. Add your Google API key in the "Constant Editor" -> Category "PLUGIN.TX_TX_GOOGLEREVIEWS_PI1"
 
-- Does the integrator need to include a static template?
-- For example add a code snippet with comments
 
-Minimal example of TypoScript:
+Plugin configurations
+====================
+After adding of "Google Reviews [googlereviews_pi1]" plugin on your target page, next plugin configurations are possible:
 
-- Code-blocks have support for syntax highlighting
-- Use any supported language
+.. t3-field-list-table::
+ :header-rows: 1
 
-.. code-block:: typoscript
+ - :Property:
+         Property:
 
-   plugin.tx_myextension.settings {
-      # configure basic email settings
-      email {
-         subject = Some subject
-         from = someemail@domain.de
-      }
-   }
+   :Date type:
+         Data type:
 
-.. _configuration-typoscript:
+   :Description:
+         Description:
+
+ - :Property:
+         Place ID
+
+   :Date type:
+         String
+
+   :Description:
+         Place IDs uniquely identify a place in the `Google Places  <https://https://developers.google.com/places/place-id>`__ database and on Google Maps.
+
+ - :Property:
+         Minimum stars
+
+   :Date type:
+         Integer
+
+   :Description:
+         Reviews will be shown only if they have min stars count
+
+ - :Property:
+         Sort By
+
+   :Date type:
+         String
+
+   :Description:
+         Reviews sorting
+
+ - :Property:
+         Limit
+
+   :Date type:
+         Integer
+
+   :Description:
+         Default and max count is 5 reviews
+
+ - :Property:
+         Show author profile photo
+
+   :Date type:
+         Boolean
+
+   :Description:
+         If an user's profile photo should be shown
+
 
 TypoScript Reference
 ====================
 
-Possible subsections: Reference of TypoScript options.
-The construct below show the recommended structure for TypoScript properties listing and description.
+plugin.tx\_googlereviews_pi1.view
+^^^^^^^^^^^^^^^^^^^^^^^
 
-When detailing data types or standard TypoScript features,
-don't hesitate to cross-link to the TypoScript Reference as shown below.
+templateRootPaths
+""""""""""""""""
 
-See :ref:`h2document:how-to-document-hyperlinks` for information about how to use cross-references.
+.. container:: table-row
 
-See the :file:`Settings.cfg` file for the declaration of cross-linking keys.
+   Property
+         templateRootPaths.0.10
+
+   Data type
+         string
+
+   Description
+         Path to templates
+
+   Default
+         EXT:google_reviews/Resources/Private/Templates/
+
+partialRootPaths
+""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         partialRootPaths.0.10
+
+   Data type
+         string
+
+   Description
+         Path to partials
+
+   Default
+         EXT:google_reviews/Resources/Private/Partials/
+
+layoutRootPaths
+""""""""""""""
+
+.. container:: table-row
+
+   Property
+         layoutRootPaths.0.10
+
+   Data type
+         string
+
+   Description
+         path to layouts
+
+   Default
+         EXT:google_reviews/Resources/Private/Layouts/
+
+
+
+plugin.tx\_googlereviews_pi1.settings
+^^^^^^^^^^^^^^^^^^^^^^^
+
+apiEndpoint
+""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         apiEndpoint
+
+   Data type
+         string
+
+   Description
+         Google Place API endpoint
+
+   Default
+         https://maps.googleapis.com/maps/api/place/details/
+
+
+apiKey
+""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         apiKey
+
+   Data type
+         string
+
+   Description
+         Your Google API key
+
+   Default
+         -
+
+authorPhotoWidth
+""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         authorPhotoWidth
+
+   Data type
+         string
+
+   Description
+         Width of author's profile photo
+
+   Default
+         50
+

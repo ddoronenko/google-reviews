@@ -6,4 +6,4 @@
 Contribute
 ==============
 
-Feel free to contribute! `GitHub-Repository <https://https://github.com/>`
+Feel free to contribute! `GitHub-Repository <https://github.com/ddoronenko/google-reviews/issues>`
