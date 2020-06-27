@@ -14,7 +14,7 @@ call_user_func(static function () {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
         \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($extKey),
         'Pi1',
-        'LLL:EXT:' . $extKey . '/Resources/Private/Languages/locallang_be.xlf:plugin_pi1.title',
+        'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:plugin_pi1.title'
     );
 
     $pluginSignature = strtolower(\TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToLowerCamelCase($extKey) . '_pi1');
