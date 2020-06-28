@@ -41,10 +41,30 @@ Google maps API key, with Maps JavaScript API and Places API both enabled via yo
 Screenshots
 ===========
 
-.. figure:: ../Images/IntroductionPackage.png
+Frontend output
+^^^^^^^^^
+
+.. figure:: ../Images/FrontendOutput.png
    :class: with-shadow
-   :alt: Introduction Package
-   :width: 300px
+   :alt: An example of the frontend output
+   :width: 900px
+
+
+Plugin configurations
+^^^^^^^^^
+
+.. figure:: ../Images/PluginBeConfigs.png
+   :class: with-shadow
+   :alt: Plugin configurations in the backend
+   :width: 900px
+
+
+Plugin constants
+^^^^^^^^^
+.. figure:: ../Images/PluginConstants.png
+   :class: with-shadow
+   :alt: Plugin constants in the "Template" module
+   :width: 900px
 
 
 How the Frontend of the Google Reviews plugin looks like after installation.
