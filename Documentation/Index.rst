@@ -10,7 +10,7 @@ Google Reviews for TYPO3
     google_reviews
 
 :Version:
-   1.0.0
+   1.0.1
 
 :Language:
    en
@@ -26,8 +26,6 @@ Google Reviews for TYPO3
 :License:
    GNU General Public License, either version 3 of the License or any later version.
 
-:Rendered:
-    |today|
 
 
 **TYPO3**
