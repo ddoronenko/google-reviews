@@ -22,7 +22,7 @@
                 <source>Minimum stars</source>
             </trans-unit>
             <trans-unit id="google_reviews_pi1.flexform.minStars.desc">
-                <source>Show reviews only if they have min stars count</source>
+                <source>Show reviews only if they have min stars count. NOTE: you can get less review records for the output than was expected</source>
             </trans-unit>
             <trans-unit id="google_reviews_pi1.flexform.sortBy">
                 <source>Sort By</source>
@@ -47,6 +47,24 @@
             </trans-unit>
             <trans-unit id="google_reviews_pi1.flexform.showAuthorProfilePhoto">
                 <source>Show author profile photo</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.language">
+                <source>Language</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.language.desc">
+                <source>Input the language code (ISO2 code), indicating in which language the results should be returned, if possible.</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.allReviewsLabel">
+                <source>Label for "All Reviews" link</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.allReviewsLink">
+                <source>Link to "All Reviews"</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.showGeneralPlaceInfo">
+                <source>Show general place information</source>
+            </trans-unit>
+            <trans-unit id="google_reviews_pi1.flexform.showGeneralPlaceInfo.desc">
+                <source>Outputs place name, average rating, count of reviews of the selected place above the reviews</source>
             </trans-unit>
         </body>
     </file>

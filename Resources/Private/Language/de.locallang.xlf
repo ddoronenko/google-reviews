@@ -15,6 +15,10 @@
             <trans-unit id="general.date_format">
                 <target>d.m.Y</target>
             </trans-unit>
+
+            <trans-unit id="general.place.review_count">
+                <target>Basierend auf %s Bewertungen</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

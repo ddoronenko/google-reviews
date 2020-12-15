@@ -3,22 +3,22 @@ declare(strict_types = 1);
 
 namespace GoogleBusiness\GoogleReviews\Controller;
 
-use GoogleBusiness\GoogleReviews\Service\ReviewService;
+use GoogleBusiness\GoogleReviews\Service\PlaceService;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class ReviewController extends ActionController
 {
     /**
-     * @var ReviewService
+     * @var PlaceService
      */
-    protected $reviewService;
+    protected $placeService;
 
     /**
-     * @param ReviewService $reviewService
+     * @param PlaceService $placeService
      */
-    public function injectReviewService(ReviewService $reviewService): void
+    public function injectPlaceService(PlaceService $placeService): void
     {
-        $this->reviewService = $reviewService;
+        $this->placeService = $placeService;
     }
 
     /**
@@ -26,6 +26,6 @@ class ReviewController extends ActionController
      */
     public function listAction(): void
     {
-        $this->view->assign('reviews', $this->reviewService->getReviewRecords($this->settings));
+        $this->view->assign('place', $this->placeService->getPlaceRecord($this->settings));
     }
 }

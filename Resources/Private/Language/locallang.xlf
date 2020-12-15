@@ -16,6 +16,9 @@
                 <source>d.m.Y</source>
             </trans-unit>
 
+            <trans-unit id="general.place.review_count">
+                <source>Based on %s reviews</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

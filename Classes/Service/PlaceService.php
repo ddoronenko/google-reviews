@@ -5,7 +5,7 @@ namespace GoogleBusiness\GoogleReviews\Service;
 
 use Psr\Log\{LoggerAwareInterface, LoggerAwareTrait};
 
-class ReviewService implements LoggerAwareInterface
+class PlaceService implements LoggerAwareInterface
 {
     use LoggerAwareTrait;
 
@@ -13,7 +13,7 @@ class ReviewService implements LoggerAwareInterface
      * @param array $settings
      * @return array
      */
-    public function getReviewRecords(array $settings): array
+    public function getPlaceRecord(array $settings): array
     {
         if (empty($settings['apiKey'])) {
             $this->logger->error(
@@ -22,13 +22,47 @@ class ReviewService implements LoggerAwareInterface
             return [];
         }
 
-        $reviews = $this->getResponseRecords($settings);
+        $response = $this->getGoogleResponse($settings);
+
+        if (empty($response['result']) === true) {
+            return [];
+        }
+
+        return [
+            'name' => $response['result']['name'],
+            'averageRating' => $response['result']['rating'],
+            'roundedAverageRating' => round($response['result']['rating']),
+            'reviewCount'  => (int)$response['result']['user_ratings_total'],
+            'reviews' => $this->getFilteredReviews($response['result']['reviews'] ?? [], $settings)
+        ];
+    }
+
+    /**
+     *
+     * @param array $reviews
+     * @param array $settings
+     * @return array
+     */
+    protected function getFilteredReviews(array $reviews, array $settings): array
+    {
+        if (empty($reviews) === true) {
+            return [];
+        }
+
+        $minStarts = (int)$settings['minStarts'];
+        $reviews = array_map(static function($item) use ($minStarts) {
+            if ($item['rating'] >= $minStarts) {
+                return $item;
+            }
+        }, $reviews);
+
+        $reviews = array_filter($reviews);
 
         if (count($reviews) < 2) {
             return $reviews;
         }
 
-        $sortedReviews = $this->sortResult($reviews, $settings['sortBy']);
+        $sortedReviews = $this->sortReviews($reviews, $settings['sortBy']);
 
         return array_slice($sortedReviews, 0, (int)$settings['maxRows']);
     }
@@ -38,7 +72,7 @@ class ReviewService implements LoggerAwareInterface
      * @param string $sortByField
      * @return array
      */
-    protected function sortResult(array $items, string $sortByField = '0'): array
+    protected function sortReviews(array $items, string $sortByField = '0'): array
     {
         if ($sortByField === '0') {
             return $items;
@@ -51,16 +85,17 @@ class ReviewService implements LoggerAwareInterface
     }
 
     /**
-     * Returns API response records according to 'minStarts' flexform configs
+     * returns PlaceID API response
      *
      * @param $settings
      * @return array
      */
-    protected function getResponseRecords($settings): array
+    protected function getGoogleResponse($settings): array
     {
         $queryParams = [
             'key'      => trim((string)$settings['apiKey']),
             'place_id' => (string)$settings['placeId'],
+            'language' => mb_strtolower((string)$settings['language'])
         ];
 
         $url      = $settings['apiEndpoint'] . 'json?' . http_build_query($queryParams);
@@ -70,19 +105,7 @@ class ReviewService implements LoggerAwareInterface
             $this->logger->error('Error while Google place reviews getting: ' . $response['error_message']);
         }
 
-        $reviews = $response['result']['reviews'];
-        if (empty($reviews) === true) {
-            return [];
-        }
-
-        $minStarts = (int)$settings['minStarts'];
-        $reviews = array_map(static function($item) use ($minStarts) {
-            if ($item['rating'] >= $minStarts) {
-                return $item;
-            }
-        }, $reviews);
-
-        return array_filter($reviews);
+        return $response;
     }
 
     /**

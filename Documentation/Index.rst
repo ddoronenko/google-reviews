@@ -10,7 +10,7 @@ Google Reviews for TYPO3
     google_reviews
 
 :Version:
-   1.0.1
+   1.1.0
 
 :Language:
    en
