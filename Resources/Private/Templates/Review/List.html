@@ -4,11 +4,19 @@
 
 <f:section name="Main">
     <div class="simple-google-reviews row">
-        <f:if condition="{reviews}">
+        <f:if condition="{settings.showGeneralPlaceInfo} && {place}">
+            <f:render partial="Place/Item" arguments="{place: place}" />
+        </f:if>
+        <f:if condition="{place.reviews}">
             <f:then>
-                <f:for each="{reviews}" as="review">
+                <f:for each="{place.reviews}" as="review">
                     <f:render partial="Review/Item" arguments="{review: review}" />
                 </f:for>
+                <f:if condition="{settings.allReviewsLink} && {settings.allReviewsLabel}">
+                    <div class="all-reviews-link col-sm-12 text-center">
+                        <f:link.typolink parameter="{settings.allReviewsLink}" class="btn btn-link">{settings.allReviewsLabel}</f:link.typolink>
+                    </div>
+                </f:if>
             </f:then>
             <f:else>
                 <strong><f:translate id="general.no_results" /></strong>

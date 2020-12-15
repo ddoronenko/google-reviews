@@ -50,6 +50,29 @@
                             </config>
                         </TCEforms>
                     </settings.minStarts>
+                    <settings.language>
+                        <TCEforms>
+                            <label>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.language</label>
+                            <description>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.language.desc</description>
+                            <config>
+                                <type>input</type>
+                                <eval>trim,required</eval>
+                                <size>4</size>
+                                <max>2</max>
+                                <default>en</default>
+                            </config>
+                        </TCEforms>
+                    </settings.language>
+                    <settings.showGeneralPlaceInfo>
+                        <TCEforms>
+                            <label>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.showGeneralPlaceInfo</label>
+                            <description>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.showGeneralPlaceInfo.desc</description>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.showGeneralPlaceInfo>
                     <settings.sortBy>
                         <TCEforms>
                             <label>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.sortBy</label>
@@ -116,6 +139,23 @@
                             </config>
                         </TCEforms>
                     </settings.showAuthorProfilePhoto>
+                    <settings.allReviewsLabel>
+                        <TCEforms>
+                            <label>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.allReviewsLabel</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.allReviewsLabel>
+                    <settings.allReviewsLink>
+                        <TCEforms>
+                            <label>LLL:EXT:google_reviews/Resources/Private/Language/locallang_be.xlf:google_reviews_pi1.flexform.allReviewsLink</label>
+                            <config>
+                                <type>input</type>
+                                <renderType>inputLink</renderType>
+                            </config>
+                        </TCEforms>
+                    </settings.allReviewsLink>
                 </el>
             </ROOT>
         </sDEF>

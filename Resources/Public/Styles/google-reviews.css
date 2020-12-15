@@ -1,4 +1,4 @@
-.stars span:before { display: inline-block; width: 20px; height: 20px; font-size: 20px; color: #df9a00 }
+.stars span:before { display: inline-block; width: 20px; height: 20px; font-size: 20px; color: #df9a00; }
 .stars span { content: url('../Icons/star.svg'); height: 20px; margin-right: 5px; }
 .stars-1 span:nth-child(2),
 .stars-1 span:nth-child(3),
@@ -10,4 +10,7 @@
 .stars-2 span:nth-child(5),
 .stars-3 span:nth-child(5),
 .stars-4 span:nth-child(5)
-{ display: none }
+{ display: none; }
+.reviews-count { color: #878787; }
+.place-info .name { color: #000; }
+.place-info .general-rating { padding-right: 8px; color: #ffc107; font-size: 20px; font-weight: 400; }
