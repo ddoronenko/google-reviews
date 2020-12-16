@@ -6,6 +6,7 @@ The simple TYPO3 extension that displays five (most-relevant) Google reviews acc
 ## Minimal requirements
 - PHP 7.x
 - TYPO3 CMS 9.5.x - 10.4.x
+- Google API key, with Maps JavaScript API and Places API both enabled via your Google API console.
 
 ## Installation
 The recommended way to install extension is by using Composer.
@@ -13,7 +14,7 @@ The recommended way to install extension is by using Composer.
 Install the extension with the following command: `composer require ddoronenko/google-reviews`
 
 ## Usage
-Please refer to the [Documentation](https://github.com/ddoronenko/google-reviews/blob/master/Documentation/)
+Please refer to the [Documentation](https://github.com/ddoronenko/google-reviews/blob/master/Documentation/Index.rst)
 
 ## ChangeLog
 Check [ChangeLog](https://github.com/ddoronenko/google-reviews/blob/master/CHANGELOG.md)

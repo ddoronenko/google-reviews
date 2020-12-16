@@ -18,62 +18,39 @@ Plugin configurations
 ====================
 After adding of "Google Reviews [googlereviews_pi1]" plugin on your target page, next plugin configurations are possible:
 
-.. t3-field-list-table::
- :header-rows: 1
+.. list-table:: Title
+   :header-rows: 1
 
- - :Property:
-         Property:
-
-   :Date type:
-         Data type:
-
-   :Description:
-         Description:
-
- - :Property:
-         Place ID
-
-   :Date type:
-         String
-
-   :Description:
-         Place IDs uniquely identify a place in the `Google Places  <https://https://developers.google.com/places/place-id>`__ database and on Google Maps.
-
- - :Property:
-         Minimum stars
-
-   :Date type:
-         Integer
-
-   :Description:
-         Reviews will be shown only if they have min stars count
-
- - :Property:
-         Sort By
-
-   :Date type:
-         String
-
-   :Description:
-         Reviews sorting
-
- - :Property:
-         Limit
-
-   :Date type:
-         Integer
-
-   :Description:
-         Default and max count is 5 reviews
-
- - :Property:
-         Show author profile photo
-
-   :Date type:
-         Boolean
-
-   :Description:
-         If an user's profile photo should be shown
+   * - Property
+     - Data type
+     - Description
+   * - Place ID
+     - String
+     - Place IDs uniquely identify a place in the `Google Places  <https://https://developers.google.com/places/place-id>`__ database and on Google Maps.
+   * - Minimum stars
+     - Integer
+     - Reviews will be shown only if they have min stars count
+   * - Language
+     - String
+     - Language code (ISO2 code), indicating in which language the results should be returned, if possible.
+   * - Sort By
+     - String
+     - Reviews sorting
+   * - Limit
+     - Integer
+     - Max count of the reviews to display (default: 5)
+   * - Show author profile photo
+     - Boolean
+     - If an user's profile photo should be shown
+   * - Label for "All Reviews" link
+     - String
+     - Label for external link leads to all reviews page
+   * - Link to "All Reviews"
+     - String
+     - An external link leads to all reviews page
+   * - Show general place information
+     - Boolean
+     - Outputs place name, average rating, count of reviews of the selected place above the reviews
 
 
 TypoScript Reference
@@ -85,54 +62,49 @@ plugin.tx\_googlereviews_pi1.view
 templateRootPaths
 """"""""""""""""
 
-.. container:: table-row
+:Property:
+    templateRootPaths.0.10
 
-   Property
-         templateRootPaths.0.10
+:Data type:
+   string
 
-   Data type
-         string
+:Description:
+   Path to the templates
 
-   Description
-         Path to templates
+:Default:
+   EXT:google_reviews/Resources/Private/Templates/
 
-   Default
-         EXT:google_reviews/Resources/Private/Templates/
 
 partialRootPaths
 """"""""""""""""
 
-.. container:: table-row
+:Property:
+    partialRootPaths.0.10
 
-   Property
-         partialRootPaths.0.10
+:Data type:
+   string
 
-   Data type
-         string
+:Description:
+   Path to the partials
 
-   Description
-         Path to partials
+:Default:
+   EXT:google_reviews/Resources/Private/Partials/
 
-   Default
-         EXT:google_reviews/Resources/Private/Partials/
 
 layoutRootPaths
 """"""""""""""
 
-.. container:: table-row
+:Property:
+    layoutRootPaths.0.10
 
-   Property
-         layoutRootPaths.0.10
+:Data type:
+   string
 
-   Data type
-         string
+:Description:
+   Path to the layouts
 
-   Description
-         path to layouts
-
-   Default
-         EXT:google_reviews/Resources/Private/Layouts/
-
+:Default:
+   EXT:google_reviews/Resources/Private/Layouts/
 
 
 plugin.tx\_googlereviews_pi1.settings
@@ -141,52 +113,45 @@ plugin.tx\_googlereviews_pi1.settings
 apiEndpoint
 """"""""""""""""
 
-.. container:: table-row
+:Property:
+    apiEndpoint
 
-   Property
-         apiEndpoint
+:Data type:
+   string
 
-   Data type
-         string
+:Description:
+   Google Place API endpoint
 
-   Description
-         Google Place API endpoint
-
-   Default
-         https://maps.googleapis.com/maps/api/place/details/
+:Default:
+   https://maps.googleapis.com/maps/api/place/details/
 
 
 apiKey
 """"""""""""""""
 
-.. container:: table-row
+:Property:
+    apiKey
 
-   Property
-         apiKey
+:Data type:
+   string
 
-   Data type
-         string
+:Description:
+   Google Maps API key, with Maps JavaScript API and Places API both enabled via your Google API console.
 
-   Description
-         Your Google API key
-
-   Default
-         -
+:Default:
+   -
 
 authorPhotoWidth
 """"""""""""""""
 
-.. container:: table-row
+:Property:
+    authorPhotoWidth
 
-   Property
-         authorPhotoWidth
+:Data type:
+   string
 
-   Data type
-         string
+:Description:
+   Width of author's profile photo
 
-   Description
-         Width of author's profile photo
-
-   Default
-         50
-
+:Default:
+   50
