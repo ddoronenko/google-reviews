@@ -10,7 +10,7 @@ Google Reviews for TYPO3
     google_reviews
 
 :Version:
-   1.1.0
+   1.1.1
 
 :Language:
    en
@@ -46,11 +46,6 @@ If you find an error or something is missing, please:
 
 This documentation is for the TYPO3 extension google_reviews.
 
-
-.. toctree::
-   :titlesonly:
-   :maxdepth: 2
-
-   Introduction/Index
-   Installation/Index
-   Configuration/Index
+- `Introduction <https://github.com/ddoronenko/google-reviews/blob/master/Documentation/Introduction/Index.rst>`__
+- `Installation <https://github.com/ddoronenko/google-reviews/blob/master/Documentation/Installation/Index.rst>`__
+- `Configuration <https://github.com/ddoronenko/google-reviews/blob/master/Documentation/Configuration/Index.rst>`__

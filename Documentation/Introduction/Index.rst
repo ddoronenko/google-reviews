@@ -6,34 +6,24 @@
 Introduction
 ============
 
-.. tip::
-
-   New to reStructuredText and Sphinx?
-
-   Get an introduction:
-   https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingReST/Index.html
-
-   Use this cheat sheet as reference:
-   https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingReST/CheatSheet.html
-
-.. _what-it-does:
-
 What does it do?
 ================
 
 Google Reviews extension to display Google business reviews on your website.
 The simple TYPO3 extension that displays five (most-relevant) Google reviews according to selected Place ID.
-
+Extension provides flexible configurations for better user experience.
 
 
 Requirements
 ================
+- PHP 7.x
+- TYPO3 CMS 9.5.x - 10.4.x
+- Google Maps API key, with Maps JavaScript API and Places API both enabled via your Google API console.
 
-Google maps API key, with Maps JavaScript API and Places API both enabled via your Google API console.
-
-.. warning::
-    Reminder: To use the Maps JavaScript API, you must include an API key with all API requests and you must enable billing on each of your projects.
-    Please, read the conditions `Maps JavaScript API Usage and Billing <https://developers.google.com/maps/documentation/javascript/usage-and-billing>`__
+Warning
+^^^^^^^^^
+Reminder: To use the Maps JavaScript API, you must include an API key with all API requests and you must enable billing on each of your projects.
+Please, read the conditions `Maps JavaScript API Usage and Billing <https://developers.google.com/maps/documentation/javascript/usage-and-billing>`__
 
 
 .. _screenshots:
@@ -66,3 +56,6 @@ Plugin constants
    :alt: Plugin constants in the "Template" module
    :width: 900px
 
+
+- `Installation <https://github.com/ddoronenko/google-reviews/blob/master/Documentation/Installation/Index.rst>`__
+- `Configuration <https://github.com/ddoronenko/google-reviews/blob/master/Documentation/Configuration/Index.rst>`__

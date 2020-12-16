@@ -1,11 +1,12 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Google Review',
-    'description' => 'Simple TYPO3 plugin for Google Reviews output.',
+    'title' => 'Google Reviews',
+    'description' => 'TYPO3 plugin displays five (most-relevant) Google reviews according to selected Place ID.
+        Extension provides flexible configurations for better user experience.',
     'category' => 'fe',
-    'version' => '1.1.0',
-    'state' => 'alpha',
+    'version' => '1.1.1',
+    'state' => 'stable',
     'clearcacheonload' => true,
     'author' => 'Dmytro Doronenko',
     'author_email' => '',

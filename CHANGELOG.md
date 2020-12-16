@@ -1,3 +1,9 @@
+## [1.1.1] - 2020-12-16
+### Updated
+- EXT 'state' property to stable in the EXT configuration
+- Broken parts of the reStructuredText documentation for GitHub
+
+
 ## [1.1.0] - 2020-12-15
 ### Added
 - Feature: "All Reviews" [#4](https://github.com/ddoronenko/google-reviews/issues/4)
