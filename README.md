@@ -4,8 +4,8 @@ This extension to display Google business reviews on your website.
 The simple TYPO3 extension that displays five (most-relevant) Google reviews according to selected Place ID.
 
 ## Minimal requirements
-- PHP 7.x
-- TYPO3 CMS 9.5.x - 10.4.x
+- PHP 7.x || 8.x
+- TYPO3 CMS 10.4.14 - 11.5.x
 - Google API key, with Maps JavaScript API and Places API both enabled via your Google API console.
 
 ## Installation

@@ -3,7 +3,10 @@ declare(strict_types = 1);
 
 namespace GoogleBusiness\GoogleReviews\Service;
 
+use GuzzleHttp\Exception\RequestException;
 use Psr\Log\{LoggerAwareInterface, LoggerAwareTrait};
+use TYPO3\CMS\Core\Http\RequestFactory;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class PlaceService implements LoggerAwareInterface
 {
@@ -102,7 +105,10 @@ class PlaceService implements LoggerAwareInterface
         $response = $this->getUrlContent($url);
 
         if (isset($response['error_message']) === true) {
-            $this->logger->error('Error while Google place reviews getting: ' . $response['error_message']);
+            $this->logger->error(
+                'Error while Google place reviews getting: {errorMessage}',
+                ['errorMessage' => $response['error_message']]
+            );
         }
 
         return $response;
@@ -114,17 +120,31 @@ class PlaceService implements LoggerAwareInterface
      */
     protected function getUrlContent(string $url): array
     {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+        $requestFactory = GeneralUtility::makeInstance(RequestFactory::class);
 
-        $data     = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
+        if ((int)$GLOBALS['TYPO3_CONF_VARS']['HTTP']['timeout'] === 0) {
+            $additionalOptions = [
+                'timeout' => 15, // should be greater than HTTP connect_timeout(default: 10)
+            ];
+        }
 
-        return ($httpCode >= 200 && $httpCode < 300) ? json_decode($data, true) : [];
+        try {
+            $response = $requestFactory->request($url, 'GET', $additionalOptions ?? []);
+        } catch (RequestException $exception) {
+            return [
+                'error_message' => $exception->getMessage()
+            ];
+        }
+
+        if ($response->getStatusCode() === 200
+            && strpos($response->getHeaderLine('Content-Type'), 'application/json') === 0
+        ) {
+            $content = $response->getBody()->getContents();
+
+            return json_decode($content, true);
+        }
+
+        return [];
     }
 
 }

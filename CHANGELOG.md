@@ -1,3 +1,9 @@
+## [2.0.0] - 2021-11-21
+### Updated
+- Support of TYPO3 v10 & v11 only
+- Replace cURL calls with TYPO3 RequestFactory [#6](https://github.com/ddoronenko/google-reviews/issues/6)
+
+
 ## [1.1.1] - 2020-12-16
 ### Updated
 - EXT 'state' property to stable in the EXT configuration

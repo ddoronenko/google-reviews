@@ -16,7 +16,7 @@ class ReviewController extends ActionController
     /**
      * @param PlaceService $placeService
      */
-    public function injectPlaceService(PlaceService $placeService): void
+    public function __construct(PlaceService $placeService)
     {
         $this->placeService = $placeService;
     }
@@ -24,7 +24,7 @@ class ReviewController extends ActionController
     /**
      * action list
      */
-    public function listAction(): void
+    public function listAction()
     {
         $this->view->assign('place', $this->placeService->getPlaceRecord($this->settings));
     }
