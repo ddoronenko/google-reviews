@@ -5,7 +5,7 @@ $EM_CONF[$_EXTKEY] = [
     'description' => 'TYPO3 plugin displays five (most-relevant) Google reviews according to selected Place ID.
         Extension provides flexible configurations for better user experience.',
     'category' => 'fe',
-    'version' => '1.1.1',
+    'version' => '2.0.0',
     'state' => 'stable',
     'clearcacheonload' => true,
     'author' => 'Dmytro Doronenko',
@@ -13,7 +13,7 @@ $EM_CONF[$_EXTKEY] = [
     'author_company' => '',
     'constraints' => [
         'depends' => [
-            'typo3' => '9.5.0-10.4.99',
+            'typo3' => '10.4.14-11.5.99',
         ]
     ],
 ];
