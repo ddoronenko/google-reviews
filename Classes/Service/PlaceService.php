@@ -96,9 +96,10 @@ class PlaceService implements LoggerAwareInterface
     protected function getGoogleResponse($settings): array
     {
         $queryParams = [
-            'key'      => trim((string)$settings['apiKey']),
-            'place_id' => (string)$settings['placeId'],
-            'language' => mb_strtolower((string)$settings['language'])
+            'reviews_sort' => (trim((string)$settings['sortBy']) === 'time') ? 'newest' : 'most_relevant',
+            'key'          => trim((string)$settings['apiKey']),
+            'place_id'     => (string)$settings['placeId'],
+            'language'     => mb_strtolower((string)$settings['language'])
         ];
 
         $url      = $settings['apiEndpoint'] . 'json?' . http_build_query($queryParams);
