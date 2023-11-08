@@ -1,10 +1,11 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
 
 namespace GoogleBusiness\GoogleReviews\Controller;
 
-use Psr\Http\Message\ResponseInterface;
 use GoogleBusiness\GoogleReviews\Service\PlaceService;
+use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class ReviewController extends ActionController
