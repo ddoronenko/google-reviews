@@ -1,3 +1,8 @@
+## [3.0.0] - 2021-11-10
+### Added
+- Add sorting('reviews_sort') to query parameters for Google API request [#pull/9](https://github.com/ddoronenko/google-reviews/pull/9)
+
+
 ## [2.0.0] - 2021-11-21
 ### Updated
 - Support of TYPO3 v10 & v11 only

@@ -98,7 +98,8 @@ class PlaceService implements LoggerAwareInterface
         $queryParams = [
             'key'      => trim((string)$settings['apiKey']),
             'place_id' => (string)$settings['placeId'],
-            'language' => mb_strtolower((string)$settings['language'])
+            'language' => mb_strtolower((string)$settings['language']),
+            'reviews_sort' => trim((string)$settings['sortBy']) === 'time' ? 'newest' : 'most_relevant',
         ];
 
         $url      = $settings['apiEndpoint'] . 'json?' . http_build_query($queryParams);
