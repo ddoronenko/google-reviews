@@ -5,6 +5,7 @@
   "license": [
     "GPL-3.0-or-later"
   ],
+  "version": "3.0.0",
   "keywords": [
     "TYPO3 CMS", "Google", "review", "business"
   ],
@@ -15,12 +16,8 @@
   },
   "extra": {
     "typo3/cms": {
-      "cms-package-dir": "{$vendor-dir}/typo3/cms"
+      "extension-key": "google_reviews"
     }
-  },
-  "config": {
-    "bin-dir": "bin",
-    "vendor-dir": "vendor"
   },
   "authors": [
     {
@@ -31,11 +28,7 @@
   "require": {
     "ext-json": "*",
     "ext-curl": "*",
-    "php" : ">=7.0",
-    "typo3/cms-core": "^10.4.14 || ^11.5"
-  },
-  "replace": {
-    "ddoronenko/google-reviews": "self.version",
-    "typo3-ter/google-reviews": "self.version"
+    "php" : ">=7.4",
+    "typo3/cms-core": "^11.5 || ^12.4"
   }
 }
