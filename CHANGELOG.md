@@ -1,4 +1,4 @@
-## [3.0.0] - 2021-11-10
+## [3.0.0] - 2021-11-09
 ### Added
 - Sorting('reviews_sort') to query parameters for Google API request [#pull/9](https://github.com/ddoronenko/google-reviews/pull/9)
 - Loading="lazy" for profile images
