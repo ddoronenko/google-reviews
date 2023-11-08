@@ -17,7 +17,7 @@ Extension provides flexible configurations for better user experience.
 Requirements
 ================
 - PHP 7.x || 8.x
-- TYPO3 CMS 10.4.14 - 11.5.x
+- TYPO3 CMS 10.4.14 - 12.4.x
 - Google Maps API key, with Maps JavaScript API and Places API both enabled via your Google API console.
 
 Warning

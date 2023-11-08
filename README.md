@@ -5,8 +5,15 @@ The simple TYPO3 extension that displays five (most-relevant) Google reviews acc
 
 ## Minimal requirements
 - PHP 7.x || 8.x
-- TYPO3 CMS 10.4.14 - 11.5.x
+- TYPO3 CMS 9.5 - 12.4.x
 - Google API key, with Maps JavaScript API and Places API both enabled via your Google API console.
+
+## Compatibility
+| EXT version  | TYPO3    | PHP       | Support / Development                |
+|--------------|----------|-----------|--------------------------------------|
+| master (3.x) | 11 - 12  | 7.4 - 8.* | Features, bugfixes, security updates |
+| 2.x          | 10 - 11  | 7.0 - 8.* | Deprecated (no support)              |
+| 1.x          | 9.5 - 10 | 7.0 - 7.4 | Deprecated (no support)              |
 
 ## Installation
 The recommended way to install extension is by using Composer.
