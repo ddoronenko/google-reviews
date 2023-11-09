@@ -1,5 +1,6 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
 
 namespace GoogleBusiness\GoogleReviews\Service;
 
@@ -36,12 +37,11 @@ class PlaceService implements LoggerAwareInterface
             'averageRating' => $response['result']['rating'],
             'roundedAverageRating' => round($response['result']['rating']),
             'reviewCount'  => (int)$response['result']['user_ratings_total'],
-            'reviews' => $this->getFilteredReviews($response['result']['reviews'] ?? [], $settings)
+            'reviews' => $this->getFilteredReviews($response['result']['reviews'] ?? [], $settings),
         ];
     }
 
     /**
-     *
      * @param array $reviews
      * @param array $settings
      * @return array
@@ -53,7 +53,7 @@ class PlaceService implements LoggerAwareInterface
         }
 
         $minStarts = (int)$settings['minStarts'];
-        $reviews = array_map(static function($item) use ($minStarts) {
+        $reviews = array_map(static function ($item) use ($minStarts) {
             if ($item['rating'] >= $minStarts) {
                 return $item;
             }
@@ -98,7 +98,8 @@ class PlaceService implements LoggerAwareInterface
         $queryParams = [
             'key'      => trim((string)$settings['apiKey']),
             'place_id' => (string)$settings['placeId'],
-            'language' => mb_strtolower((string)$settings['language'])
+            'language' => mb_strtolower((string)$settings['language']),
+            'reviews_sort' => trim((string)$settings['sortBy']) === 'time' ? 'newest' : 'most_relevant',
         ];
 
         $url      = $settings['apiEndpoint'] . 'json?' . http_build_query($queryParams);
@@ -132,12 +133,12 @@ class PlaceService implements LoggerAwareInterface
             $response = $requestFactory->request($url, 'GET', $additionalOptions ?? []);
         } catch (RequestException $exception) {
             return [
-                'error_message' => $exception->getMessage()
+                'error_message' => $exception->getMessage(),
             ];
         }
 
         if ($response->getStatusCode() === 200
-            && strpos($response->getHeaderLine('Content-Type'), 'application/json') === 0
+            && str_starts_with($response->getHeaderLine('Content-Type'), 'application/json')
         ) {
             $content = $response->getBody()->getContents();
 
@@ -146,5 +147,4 @@ class PlaceService implements LoggerAwareInterface
 
         return [];
     }
-
 }

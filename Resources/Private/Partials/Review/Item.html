@@ -3,7 +3,8 @@
     <div class="d-sm-flex text-center text-sm-left">
         <f:if condition="{settings.showAuthorProfilePhoto} == 1">
             <div class="pr-4 img-wrapper">
-                <img src="{review.profile_photo_url}" width="{settings.authorPhotoWidth}" alt="{review.author_name}" />
+                <img src="{review.profile_photo_url}" width="{settings.authorPhotoWidth}" alt="{review.author_name}"
+                     loading="lazy" />
             </div>
         </f:if>
         <div>

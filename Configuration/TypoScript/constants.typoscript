@@ -7,4 +7,7 @@ plugin.tx_googlereviews_pi1 {
 
     # cat=plugin.tx_tx_googlereviews_pi1/front/3; type=int+; label=Width of author's profile photo
     authorPhotoWidth = 50
+
+    # cat=plugin.tx_tx_googlereviews_pi1/api/3; type=options[most_relevant,time]; label=The sorting method to use (default: most_relevant)
+    sortBy =
 }

@@ -1,15 +1,16 @@
 <?php
 
-if (!defined('TYPO3_MODE')) {
-    die('Access denied.');
-}
+declare(strict_types=1);
 
-call_user_func(static function () {
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'GoogleReviews',
-        'Pi1',
-        [\GoogleBusiness\GoogleReviews\Controller\ReviewController::class => 'list'],
-        [\GoogleBusiness\GoogleReviews\Controller\ReviewController::class  => ''],
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_PLUGIN
-    );
-});
+use GoogleBusiness\GoogleReviews\Controller\ReviewController;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+
+defined('TYPO3') or die();
+
+ExtensionUtility::configurePlugin(
+    'GoogleReviews',
+    'Pi1',
+    [ReviewController::class => 'list'],
+    [ReviewController::class  => ''],
+    ExtensionUtility::PLUGIN_TYPE_PLUGIN
+);

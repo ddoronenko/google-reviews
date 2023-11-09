@@ -1,3 +1,12 @@
+## [3.0.0] - 2021-11-09
+### Added
+- Sorting('reviews_sort') to query parameters for Google API request [#pull/9](https://github.com/ddoronenko/google-reviews/pull/9)
+- Attr loading="lazy" for profile images
+
+### Updated
+- Support of TYPO3 v11 & v12 only. Drop support of TYPO3 v10
+
+
 ## [2.0.0] - 2021-11-21
 ### Updated
 - Support of TYPO3 v10 & v11 only
