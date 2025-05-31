@@ -10,12 +10,7 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class ReviewController extends ActionController
 {
-    protected $placeService;
-
-    public function __construct(PlaceService $placeService)
-    {
-        $this->placeService = $placeService;
-    }
+    public function __construct(private readonly PlaceService $placeService) {}
 
     public function listAction(): ResponseInterface
     {

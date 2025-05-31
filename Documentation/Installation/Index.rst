@@ -43,5 +43,16 @@ The extension ships some TypoScript code which needs to be included.
 
 #. Select **Google reviews (google_reviews)** at the field *Include static (from extensions) -> Available Items:*
 
+.. note::
+
+   For TYPO3 v13 and above, you can also include the extension as a site dependency.
+   Add the following to your site's `config.yaml` under the `dependencies` section:
+
+   .. code:: yaml
+
+      dependencies:
+        extensions:
+          - google_reviews
+
 
 `Configuration <https://github.com/ddoronenko/google-reviews/blob/master/Documentation/Configuration/Index.rst>`__

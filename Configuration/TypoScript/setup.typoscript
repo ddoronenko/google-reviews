@@ -1,4 +1,4 @@
-plugin.tx_googlereviews_pi1 {
+plugin.tx_googlereviews {
     view {
         templateRootPaths {
             10 = EXT:google_reviews/Resources/Private/Templates/
@@ -12,10 +12,10 @@ plugin.tx_googlereviews_pi1 {
     }
 
     settings {
-        apiEndpoint = {$plugin.tx_googlereviews_pi1.apiEndpoint}
-        apiKey = {$plugin.tx_googlereviews_pi1.apiKey}
-        authorPhotoWidth = {$plugin.tx_googlereviews_pi1.authorPhotoWidth}
-        sortBy = {$plugin.tx_googlereviews_pi1.sortBy}
+        apiEndpoint = {$plugin.tx_googlereviews.apiEndpoint}
+        apiKey = {$plugin.tx_googlereviews.apiKey}
+        authorPhotoWidth = {$plugin.tx_googlereviews.authorPhotoWidth}
+        sortBy = {$plugin.tx_googlereviews.sortBy}
     }
 }
 
