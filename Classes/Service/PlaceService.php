@@ -5,13 +5,15 @@ declare(strict_types=1);
 namespace GoogleBusiness\GoogleReviews\Service;
 
 use GuzzleHttp\Exception\RequestException;
-use Psr\Log\{LoggerAwareInterface, LoggerAwareTrait};
+use Psr\Log\LoggerInterface;
 use TYPO3\CMS\Core\Http\RequestFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class PlaceService implements LoggerAwareInterface
+readonly class PlaceService
 {
-    use LoggerAwareTrait;
+    public function __construct(
+        private LoggerInterface $logger,
+    ) {}
 
     /**
      * @param array $settings
@@ -19,9 +21,10 @@ class PlaceService implements LoggerAwareInterface
      */
     public function getPlaceRecord(array $settings): array
     {
-        if (empty($settings['apiKey'])) {
+        if (empty($settings['apiKey']) || $settings['apiKey'] === '{$plugin.tx_googlereviews.apiKey}') {
+            // @extensionScannerIgnoreLine
             $this->logger->error(
-                'Google API key wasn`t set! Please set \'plugin.tx_googlereviews_pi1.apiKey\' TypoScript constant.'
+                'Google API key wasn`t set! Please set \'plugin.tx_googlereviews.apiKey\' TypoScript constant.'
             );
             return [];
         }
@@ -106,6 +109,7 @@ class PlaceService implements LoggerAwareInterface
         $response = $this->getUrlContent($url);
 
         if (isset($response['error_message']) === true) {
+            // @extensionScannerIgnoreLine
             $this->logger->error(
                 'Error while Google place reviews getting: {errorMessage}',
                 ['errorMessage' => $response['error_message']]
@@ -115,10 +119,6 @@ class PlaceService implements LoggerAwareInterface
         return $response;
     }
 
-    /**
-     * @param string $url
-     * @return array|mixed
-     */
     protected function getUrlContent(string $url): array
     {
         $requestFactory = GeneralUtility::makeInstance(RequestFactory::class);

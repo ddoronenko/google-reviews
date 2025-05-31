@@ -1,13 +1,13 @@
-plugin.tx_googlereviews_pi1 {
-    # cat=plugin.tx_tx_googlereviews_pi1/api/1; type=string; label=Google Place API endpoint
+plugin.tx_googlereviews {
+    # cat=plugin.tx_googlereviews/api/1; type=string; label=Google Place API endpoint
     apiEndpoint = https://maps.googleapis.com/maps/api/place/details/
 
-    # cat=plugin.tx_tx_googlereviews_pi1/api/2; type=string; label=Your Google API key
+    # cat=plugin.tx_googlereviews/api/2; type=string; label=Your Google API key
     apiKey =
 
-    # cat=plugin.tx_tx_googlereviews_pi1/front/3; type=int+; label=Width of author's profile photo
+    # cat=plugin.tx_googlereviews_/front/3; type=int+; label=Width of author's profile photo
     authorPhotoWidth = 50
 
-    # cat=plugin.tx_tx_googlereviews_pi1/api/3; type=options[most_relevant,time]; label=The sorting method to use (default: most_relevant)
+    # cat=plugin.tx_googlereviews/api/3; type=options[most_relevant,time]; label=The sorting method to use (default: most_relevant)
     sortBy =
 }

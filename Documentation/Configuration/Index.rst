@@ -11,12 +11,12 @@ Required
 
 1. On your root page, in the site template, add "Google reviews" in the "Include static (from extensions)" field.
 
-2. Add your Google API key in the "Constant Editor" -> Category "PLUGIN.TX_TX_GOOGLEREVIEWS_PI1"
+2. Add your Google API key in the "Constant Editor" -> Category "PLUGIN.TX_GOOGLEREVIEWS"
 
 
 Plugin configurations
 ====================
-After adding of "Google Reviews [googlereviews_pi1]" plugin on your target page, next plugin configurations are possible:
+After adding of "Google Reviews [googlereviews_reviewlist]" plugin on your target page, next plugin configurations are possible:
 
 .. list-table:: Title
    :header-rows: 1
@@ -56,7 +56,7 @@ After adding of "Google Reviews [googlereviews_pi1]" plugin on your target page,
 TypoScript Reference
 ====================
 
-plugin.tx\_googlereviews_pi1.view
+plugin.tx\_googlereviews.view
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 templateRootPaths
@@ -107,7 +107,7 @@ layoutRootPaths
    EXT:google_reviews/Resources/Private/Layouts/
 
 
-plugin.tx\_googlereviews_pi1.settings
+plugin.tx\_googlereviews.settings
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 apiEndpoint

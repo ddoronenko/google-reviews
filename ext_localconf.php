@@ -9,8 +9,8 @@ defined('TYPO3') or die();
 
 ExtensionUtility::configurePlugin(
     'GoogleReviews',
-    'Pi1',
+    'ReviewList',
     [ReviewController::class => 'list'],
     [ReviewController::class  => ''],
-    ExtensionUtility::PLUGIN_TYPE_PLUGIN
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );

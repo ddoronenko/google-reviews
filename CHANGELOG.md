@@ -1,3 +1,12 @@
+## [4.0.0] - 2025-06-01
+### Added
+- "Troubleshooting" section to the README file
+- Update wizard from plugin(list) to CType migration
+
+### Updated
+- Support of TYPO3 v13 only. Drop support of TYPO3 v11-v12v [#pull/13](https://github.com/ddoronenko/google-reviews/pull/13)
+
+
 ## [3.0.0] - 2021-11-09
 ### Added
 - Sorting('reviews_sort') to query parameters for Google API request [#pull/9](https://github.com/ddoronenko/google-reviews/pull/9)
