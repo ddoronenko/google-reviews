@@ -1,3 +1,8 @@
+## [4.0.1] - 2025-07-05
+### Updated
+- "Troubleshooting/update" sections with the comments of EXT version v3.0 to 4.0 update [#8](https://github.com/ddoronenko/google-reviews/issues/8)
+
+
 ## [4.0.0] - 2025-06-01
 ### Added
 - "Troubleshooting" section to the README file
