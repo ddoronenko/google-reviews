@@ -2,9 +2,10 @@
 ### Added
 - "Troubleshooting" section to the README file
 - Update wizard from plugin(list) to CType migration
+- Rename constants key path from `plugin.tx_googlereviews_pi1.` to `plugin.tx_googlereviews.` [#8](https://github.com/ddoronenko/google-reviews/issues/8)
 
 ### Updated
-- Support of TYPO3 v13 only. Drop support of TYPO3 v11-v12v [#pull/13](https://github.com/ddoronenko/google-reviews/pull/13)
+- Support of TYPO3 v13 only. Drop support of TYPO3 v11-v12 [#pull/13](https://github.com/ddoronenko/google-reviews/pull/13)
 
 
 ## [3.0.0] - 2021-11-09

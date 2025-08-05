@@ -16,7 +16,7 @@ The simple TYPO3 extension that displays five (most-relevant) Google reviews acc
 | 2.x          | 10 - 11  | 7.0 - 8.* | Deprecated (no support)              |
 | 1.x          | 9.5 - 10 | 7.0 - 7.4 | Deprecated (no support)              |
 
-## Installation (short Version)
+## Installation (short version)
 The recommended way to install extension is by using Composer.
 
 1. Install the extension with the following command: `composer require ddoronenko/google-reviews`
@@ -32,14 +32,20 @@ Full installation instructions can be found in the [Documentation](https://githu
 ## Usage
 Please refer to the [Documentation](https://github.com/ddoronenko/google-reviews/blob/master/Documentation/Index.rst)
 
+### Update from version v3.0 to 4.0
+While EXT version v3.0 -> 4.0 migration: you need to replace/update the TS constant key path from `plugin.tx_googlereviews_pi1.` to `plugin.tx_googlereviews.`
+
+Until EXT version 4.0: make sure you use the proper `plugin.tx_googlereviews_pi1.` constant key path.
+
 ## Troubleshooting
 1. Check TYPO3 logs (`/var/logs/typo3_*.log`) for any errors related to the extension.
-2. Make sure you have a valid [Google API key] with Maps JavaScript API and Places API enabled in the Google Cloud .
+2. Make sure you have a valid [Google API key] with Maps JavaScript API and Places API enabled in the Google Cloud.
 3. Make sure that billing is enabled for your Google Cloud project, as the Places API requires billing to be active.
 4. Make sure you have included the static TypoScript from the extension in your site package or in the Template record of your TYPO3 site.
 5. In you include extension "setup.typoscript" file directly in your site package, make sure you have included the "constants.typoscript" file as well, otherwise the extension will not work properly.
 6. Check if selected/used Place ID is correct and corresponds to a valid Google business location. [Find ID](https://developers.google.com/maps/documentation/places/web-service/place-id).
 7. Check the "Application restrictions" section for the API key configs in your Google Cloud Console. Application restrictions limit an API key’s usage to specific websites, IP addresses, Android applications, or iOS applications. You can set one application restriction per key.
+8. While version v3.0 -> 4.0 migration: you need to replace/update the TS constant key path from `plugin.tx_googlereviews_pi1.` to `plugin.tx_googlereviews.`
 
 ## ChangeLog
 Check [ChangeLog](https://github.com/ddoronenko/google-reviews/blob/master/CHANGELOG.md)
